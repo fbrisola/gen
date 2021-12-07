@@ -1,0 +1,35 @@
+<?php
+
+use Fisharebest\Webtrees\Place;
+
+/**
+ * @var string $name
+ * @var Place $place
+ * @var string $tag
+ * @var string $url
+ * @var string $value
+ */
+
+?>
+
+<div class="label">
+    <?= $tag ?>
+</div>
+
+<?php if ($url !== '') : ?>
+    <a href="<?= e($url) ?>">
+        <?= $name ?>
+    </a>
+<?php endif ?>
+
+<?php if ($value !== '') : ?>
+    <span>
+        <?= $value ?>
+    </span>
+<?php endif ?>
+
+<?php if ($place->gedcomName() !== '') : ?>
+    <div>
+        <?= $place->fullName(true) ?>
+    </div>
+<?php endif ?>

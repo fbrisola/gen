@@ -1,0 +1,20 @@
+<?php
+
+declare(strict_types=1);
+
+use Fisharebest\Webtrees\Statistics;
+
+/**
+ * @var Statistics $stats
+ */
+
+?>
+
+<div class="container pt-3">
+    <?= view('statistics/other/total-records', ['stats' => $stats]) ?>
+    <?= view('statistics/other/total-events', ['stats' => $stats]) ?>
+    <?= view('statistics/other/chart-objects', ['stats' => $stats]) ?>
+    <?= view('statistics/other/chart-sources', ['stats' => $stats]) ?>
+    <?= view('statistics/other/places', ['stats' => $stats]) ?>
+    <?= view('statistics/other/chart-distribution', ['stats' => $stats]) ?>
+</div>
